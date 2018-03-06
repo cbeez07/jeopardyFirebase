@@ -1,4 +1,4 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
 
 // Initialize Firebase
@@ -62,4 +62,4 @@ $(document).ready(function() {
     uid = user.uid;
   }
 
-});
+// });
