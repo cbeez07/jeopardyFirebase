@@ -1,3 +1,6 @@
+$(document).ready(function() {
+
+
 // Initialize Firebase
   var config = {
     apiKey: "AIzaSyB9lkXWDXDgzL4-_C9BlIdwX7Gk5jfH33w",
@@ -36,3 +39,27 @@
   // }).catch(function(error) {
   //   // An error happened.
   // });
+
+// observer to check and see if a user is signed in.
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+  } else {
+    // No user is signed in.
+  }
+  });
+
+// variables
+  var database = firebase.database();
+  var user = firebase.auth().currentUser;
+  var name, email, photoUrl, uid, emailVerified;
+
+  if (user != null) {
+    name = user.displayName;
+    email = user.email;
+    photoUrl = user.photoURL;
+    emailVerified = user.emailVerified;
+    uid = user.uid;
+  }
+
+});
