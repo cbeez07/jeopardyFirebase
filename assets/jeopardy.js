@@ -15,6 +15,7 @@ var displayName;
 
 
 function signIn() {
+  console.log('two');
   if (!firebase.auth().currentUser) {
 
     var provider = new firebase.auth.GoogleAuthProvider();
