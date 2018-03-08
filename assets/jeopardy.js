@@ -25,6 +25,7 @@ function signIn() {
     firebase.auth().signInWithRedirect(provider);
   } else {
     firebase.auth().signOut();
+    
   }
 }
 
@@ -53,6 +54,7 @@ function initApp() {
   firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     displayName = user.displayName;
+    console.log(displayName);
     // put displayName in area for name.
     // when game is over put name in leaderboard in order
     // repalace button with sign out button.
